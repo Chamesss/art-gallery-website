@@ -4,23 +4,19 @@ export const links = [
         hash: "#home",
     },
     {
-        name: "About",
+        name: "Products",
+        hash: "#products",
+    },
+    {
+        name: "About Us",
         hash: "#about",
     },
     {
-        name: "Projects",
-        hash: "#projects",
+        name: "Concept",
+        hash: "#concept",
     },
     {
-        name: "Skills",
-        hash: "#skills",
-    },
-    {
-        name: "Experience",
-        hash: "#experience",
-    },
-    {
-        name: "Contact",
+        name: "Contact Us",
         hash: "#contact",
     },
 ] as const;
