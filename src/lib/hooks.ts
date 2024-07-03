@@ -1,7 +1,7 @@
 "use client"
 
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
@@ -20,3 +20,21 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75
         ref
     }
 }
+
+export const useScrollPosition = () => {
+    const [isAtTop, setIsAtTop] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsAtTop(window.scrollY === 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    return isAtTop;
+};
