@@ -21,7 +21,7 @@ export default function ProductCard({ id }: { id: Number }) {
             }}
             className="flex h-auto w-auto items-center justify-center rounded-lg bg-red-300"
         >
-            <Card className="w-[350px] overflow-hidden rounded-lg bg-[#1a1a1a] text-white shadow-lg">
+            <Card className="w-[350px] overflow-hidden rounded-lg bg-[#1a1a1a] text-white shadow-xl">
                 <Image
                     src="/placeholder.svg"
                     width={500}
