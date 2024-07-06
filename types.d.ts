@@ -1,9 +1,15 @@
 interface Product {
-    id: number;
+    id: number
+    title: string
+    description: string
+    pictures: string[]
+    width: number
+    height: number
+    tokens: string[]
+}
+
+interface ProductOverview {
     title: string;
     description: string;
-    pictures: string[];
-    width: number;
-    height: number;
-    tokens: string[];
+    imageUrl: string;
 }
