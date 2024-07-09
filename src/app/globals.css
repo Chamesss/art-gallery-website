@@ -76,3 +76,69 @@
         @apply bg-background text-foreground;
     }
 }
+
+.coverflow-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    /*added*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 60px 0;
+    border: red solid 1px; /*just to see boundaries*/
+    transition: all ease 500ms;
+}
+
+.coverflow-item {
+    /*position: absolute;*/
+    width: 200px; /* Width of each slide */
+    height: 250px; /* Height of non-active slides */
+    /*left: 50%;*/
+    transform-origin: center;
+    transition:
+        transform 0.5s ease,
+        z-index 0s linear,
+        height 0.5s ease,
+        opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b5b4b6;
+    color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+
+.coverflow-item.active {
+    background: #272a36;
+    z-index: 3;
+    opacity: 1;
+
+    /*height: 90%;*/ /* Larger height for the active slide */
+}
+
+.coverflow-item.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.coverflow-controls {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+button {
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

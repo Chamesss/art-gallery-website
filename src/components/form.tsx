@@ -11,11 +11,11 @@ export default function From() {
         <section
             ref={ref}
             id="contact"
-            className="w-full py-12 md:py-24 lg:py-10"
+            className="w-full py-10 lg:py-10"
         >
             <div className="container max-w-4xl px-4 md:px-6">
                 <div className="space-y-6 text-center">
-                    <div className="space-y-2">
+                    <div className="space-y-16">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                             Get in Touch
                         </h2>

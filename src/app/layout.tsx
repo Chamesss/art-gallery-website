@@ -39,7 +39,6 @@ export default function RootLayout({
                 <div className="absolute bottom-0 right-[11rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#ffe1003f] blur-[10rem] dark:bg-[#ffffff25] sm:w-[68.75rem]" />
                 <ThemeContextProvider>
                     <ActiveSectionContextProvider>
-                        <Header />
                         {children}
                         <Footer />
                         <Toaster position="bottom-left" />
