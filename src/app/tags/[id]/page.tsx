@@ -7,7 +7,9 @@ export default function Product({ params }: { params: { id: string } }) {
     if (!item) return <div>Product not found</div>
     return (
         <main>
-            <Slider item={item} />
+            <div className="flex overflow-hidden">
+                <Slider item={item} />
+            </div>
         </main>
     )
 }

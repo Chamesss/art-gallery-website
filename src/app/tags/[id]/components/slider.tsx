@@ -12,14 +12,14 @@ export default function Slider({ item }: { item: Product }) {
     ]
 
     // Function to slide to the index
-    const slideTo = (index) => {
+    const slideTo = (index: number) => {
         setActiveIndex(index)
     }
 
     const TILE_SIZE = 150
 
     /* the closer we to the center, the more far we move the tile */
-    function calcTranslateZ(index, activeIndex) {
+    function calcTranslateZ(index: number, activeIndex: number) {
         if (index === activeIndex) return -TILE_SIZE * 2.5
         return -(
             (TILE_SIZE * 10) /
@@ -28,23 +28,23 @@ export default function Slider({ item }: { item: Product }) {
     }
 
     /* the more you far from center, the smaller the gap */
-    function calcTranslateX(index, activeIndex) {
+    function calcTranslateX(index: number, activeIndex: number) {
         if (index === activeIndex) return 0
         return Math.pow(activeIndex - index, 3) * 10
     }
 
     /* the closer to the center, the more "exposed the tile" */
-    function calcRotateY(index, activeIndex) {
+    function calcRotateY(index: number, activeIndex: number) {
         return (activeIndex - index) * 30
     }
 
     /* we shif the container  with the tiles, so the active tile is centralized */
-    function calcShift(activeIndex) {
+    function calcShift(activeIndex: number) {
         return ((slides.length - 1) / 2 - activeIndex) * TILE_SIZE
     }
 
     /* if a tile far from center, it looks ugly */
-    function shouldHideTile(index, activeIndex) {
+    function shouldHideTile(index: number, activeIndex: number) {
         return Math.abs(activeIndex - index) > 2
     }
 
