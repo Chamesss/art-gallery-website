@@ -11,8 +11,9 @@ import './globals.css'
 const josefin_sans = Josefin_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'art-gallery-website',
-    description: 'art-gallery-website',
+    title: 'Thot Arts',
+    description:
+        'Elegant, royal, and classy paintings for discerning art collectors.',
 }
 
 export default function RootLayout({
@@ -23,12 +24,12 @@ export default function RootLayout({
     return (
         <html lang="en" className="!scroll-smooth">
             <meta name="author" content="ChamseDin Azouz" />
-            <meta property="og:title" content="art-gallery-website" />
-            <meta property="og:description " content="art-gallery-website" />
+            <meta property="og:title" content="Thot Arts" />
             <meta
-                property="og:url"
-                content="https://art-gallery-website-beta.vercel.app/"
+                property="og:description"
+                content="description: 'Elegant, royal, and classy paintings for discerning art collectors.'"
             />
+            <meta property="og:url" content="https://www.thotarts.com/" />
             <meta property="og:image" content="" />
             <body
                 className={`${josefin_sans.className} scrollbar-container relative bg-slate-100 text-gray-950 dark:bg-[#2b2b2b] dark:text-gray-50 dark:text-opacity-90`}
