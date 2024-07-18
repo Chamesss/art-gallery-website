@@ -23,7 +23,7 @@ export const links = [
 
 export const products: Product[] = [
     {
-        id: 0,
+        id: "hrMBp1EPXCarNZRGcZivS",
         title: 'Model 1',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -33,7 +33,7 @@ export const products: Product[] = [
         tokens: ['Token1', 'Token2', 'Token3'],
     },
     {
-        id: 1,
+        id: "VBKy-tnCdXfzl-TeNSutV",
         title: 'Model 2',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -43,7 +43,7 @@ export const products: Product[] = [
         tokens: ['Token4', 'Token5', 'Token6'],
     },
     {
-        id: 2,
+        id: "KLm-IuknYKltxEgQ_Lw_B",
         title: 'Model 3',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

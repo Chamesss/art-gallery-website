@@ -5,7 +5,13 @@ import React, { useRef } from 'react'
 import { Button } from '../ui/button'
 import { Card, CardContent } from '../ui/card'
 
-export default function ProductCard({ id }: { id: Number }) {
+export default function ProductCard({
+    id,
+    index,
+}: {
+    id: string
+    index: number
+}) {
     const ref = useRef<HTMLDivElement>(null)
     const isInView = useInView(ref, { once: true })
     return (
@@ -15,7 +21,7 @@ export default function ProductCard({ id }: { id: Number }) {
                 style={{
                     transform: isInView
                         ? 'none'
-                        : id === 2
+                        : index === 2
                           ? 'translateX(200px)'
                           : 'translateX(-200px)',
                     opacity: isInView ? 1 : 0,

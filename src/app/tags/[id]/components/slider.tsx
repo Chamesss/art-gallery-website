@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 
-export default function Slider({ item }: { item: Product }) {
+export default function Slider({ model }: { model: Product }) {
     const [activeIndex, setActiveIndex] = useState(2) // Active slide index
     const slides = [
         'Performance Simplified',
@@ -51,7 +51,7 @@ export default function Slider({ item }: { item: Product }) {
     return (
         <>
             <div
-                className="coverflow-container"
+                className="coverflow-container flex flex-1"
                 style={{
                     transform: `translateX(${calcShift(activeIndex)}px)`,
                 }}
@@ -76,7 +76,7 @@ export default function Slider({ item }: { item: Product }) {
                     )
                 })}
             </div>
-            <div className="coverflow-controls">
+            <div>
                 <button
                     onClick={() => slideTo(activeIndex - 1)}
                     disabled={activeIndex === 0}
