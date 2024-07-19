@@ -46,7 +46,7 @@ export default function SliderPrototype() {
                         <Image
                             src={image}
                             alt="slide_image"
-                            className="slide_image"
+                            className="slide_image h-[35rem] w-[30rem] rounded-[2rem] object-cover"
                             width={1024}
                             height={1024}
                             priority={true}

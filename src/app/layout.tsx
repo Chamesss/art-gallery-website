@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
+import './tags/[id]/components/styles.css'
 
 const josefin_sans = Josefin_Sans({ subsets: ['latin'] })
 
