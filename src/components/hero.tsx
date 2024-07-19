@@ -18,18 +18,19 @@ export default function Hero() {
         <section
             id="home"
             ref={ref}
-            className="flex h-full w-full items-center justify-center"
+            className="flex h-full w-full items-center justify-center overflow-hidden"
         >
             <Swiper
                 spaceBetween={0}
                 centeredSlides={true}
+                slidesPerView={1}
                 effect={'fade'}
                 modules={[EffectFade, Autoplay, Navigation, Pagination]}
                 pagination={{
                     clickable: true,
                     enabled: false,
                 }}
-                className="mySwiper"
+                className="w-full"
                 navigation={{
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -42,37 +43,38 @@ export default function Hero() {
                 loop={true}
             >
                 {products.map((p, i) => (
-                    <SwiperSlide key={i}>
-                        <div className="relative h-[93vh] w-full overflow-hidden">
-                            <div className="absolute left-1/2 top-1/2 z-10 w-full -translate-x-1/2 -translate-y-1/2 transform">
-                                <div className="z-10 flex w-full flex-row items-center justify-center space-x-[8rem]">
-                                    <div className="flex h-[22rem] w-[22rem] flex-col items-center justify-evenly">
-                                        <p className="text-center text-2xl font-semibold text-white">
-                                            {p.title}
-                                        </p>
-                                        <p className="text-white">
-                                            {p.description}
-                                        </p>
-                                    </div>
-                                    <Image
-                                        width={1920}
-                                        height={1080}
-                                        priority={true}
-                                        alt={p.title}
-                                        src={p.pictures[0]}
-                                        className="z-10 h-[23rem] w-[23rem] rounded-md object-fill"
-                                    />
+                    <SwiperSlide
+                        key={i}
+                        className="bg-transparent! relative !h-[93vh] !w-screen"
+                    >
+                        <div className="absolute left-1/2 top-1/2 z-20 w-fit -translate-x-1/2 -translate-y-1/2 transform">
+                            <div className="flex flex-row items-center justify-center space-x-[8rem]">
+                                <div className="flex h-[22rem] !w-[22rem] flex-col items-center justify-evenly">
+                                    <p className="text-center text-2xl font-semibold text-white">
+                                        {p.title}
+                                    </p>
+                                    <p className="text-white">
+                                        {p.description}
+                                    </p>
                                 </div>
+                                <Image
+                                    width={1920}
+                                    height={1080}
+                                    priority={true}
+                                    alt={p.title}
+                                    src={p.pictures[0]}
+                                    className="z-10 !h-[22rem] !w-[22rem] !rounded-sm object-fill"
+                                />
                             </div>
-                            <Image
-                                width={1920}
-                                height={1080}
-                                priority={true}
-                                alt={p.title}
-                                src={p.pictures[0]}
-                                className="-z-10 h-full w-full scale-110 object-cover blur-xl"
-                            />
                         </div>
+                        <Image
+                            width={1920}
+                            height={1080}
+                            priority={true}
+                            alt={p.title}
+                            src={p.pictures[0]}
+                            className="-z-10 !h-full !w-full scale-110 !object-cover blur-xl"
+                        />
                     </SwiperSlide>
                 ))}
             </Swiper>

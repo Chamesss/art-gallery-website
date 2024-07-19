@@ -2,18 +2,16 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-//@ts-ignore
-import { EffectCoverflow, Navigation, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export default function SliderPrototype() {
     return (
         <div className="container">
-            <h1 className="heading">Flower Gallery</h1>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
