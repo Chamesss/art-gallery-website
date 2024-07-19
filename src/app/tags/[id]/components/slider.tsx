@@ -1,95 +1,75 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
-import React, { useState } from 'react'
+import Image from 'next/image'
+import React from 'react'
+//@ts-ignore
+import { EffectCoverflow, Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-export default function Slider({ model }: { model: Product }) {
-    const [activeIndex, setActiveIndex] = useState(2) // Active slide index
-    const slides = [
-        'Performance Simplified',
-        'Accessibility Simplified',
-        'Cloud Simplified',
-        'Data Simplified',
-        'Environment Simplified',
-    ]
-
-    // Function to slide to the index
-    const slideTo = (index: number) => {
-        setActiveIndex(index)
-    }
-
-    const TILE_SIZE = 150
-
-    /* the closer we to the center, the more far we move the tile */
-    function calcTranslateZ(index: number, activeIndex: number) {
-        if (index === activeIndex) return -TILE_SIZE * 2.5
-        return -(
-            (TILE_SIZE * 10) /
-            (Math.abs(index - activeIndex) * slides.length)
-        )
-    }
-
-    /* the more you far from center, the smaller the gap */
-    function calcTranslateX(index: number, activeIndex: number) {
-        if (index === activeIndex) return 0
-        return Math.pow(activeIndex - index, 3) * 10
-    }
-
-    /* the closer to the center, the more "exposed the tile" */
-    function calcRotateY(index: number, activeIndex: number) {
-        return (activeIndex - index) * 30
-    }
-
-    /* we shif the container  with the tiles, so the active tile is centralized */
-    function calcShift(activeIndex: number) {
-        return ((slides.length - 1) / 2 - activeIndex) * TILE_SIZE
-    }
-
-    /* if a tile far from center, it looks ugly */
-    function shouldHideTile(index: number, activeIndex: number) {
-        return Math.abs(activeIndex - index) > 2
-    }
-
+export default function SliderPrototype() {
     return (
-        <>
-            <div
-                className="coverflow-container flex flex-1"
-                style={{
-                    transform: `translateX(${calcShift(activeIndex)}px)`,
+        <div className="container">
+            <h1 className="heading">Flower Gallery</h1>
+            <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                slidesPerView={3}
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2.5,
                 }}
+                pagination={{ el: '.swiper-pagination', clickable: true }}
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }}
+                modules={[EffectCoverflow, Pagination, Navigation]}
+                className="swiper_container"
             >
-                {slides.map((slide, index) => {
-                    return (
-                        <div
-                            key={slide}
-                            className={`coverflow-item ${
-                                index === activeIndex ? 'active' : ''
-                            } ${shouldHideTile(index, activeIndex) ? 'hidden' : ''} `}
-                            style={{
-                                transform: `
-                  translateZ(${calcTranslateZ(index, activeIndex)}px)
-                  translateX(${calcTranslateX(index, activeIndex)}px)
-                  rotateY(${calcRotateY(index, activeIndex)}deg) `,
-                            }}
-                            onClick={() => slideTo(index)}
-                        >
-                            {slide}
-                        </div>
-                    )
-                })}
-            </div>
-            <div>
-                <button
-                    onClick={() => slideTo(activeIndex - 1)}
-                    disabled={activeIndex === 0}
-                >
-                    &lt;
-                </button>
-                <button
-                    onClick={() => slideTo(activeIndex + 1)}
-                    disabled={activeIndex === slides.length - 1}
-                >
-                    &gt;
-                </button>
-            </div>
-        </>
+                <SwiperSlide>
+                    <img
+                        src={'/images/img_1.jpg'}
+                        alt="slide_image"
+                        className="slide_image"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_2.jpg'} alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_3.jpg'} alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_4.jpg'} alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_5.jpg'} alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_6.jpg'} alt="slide_image" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src={'/images/img_7.jpg'} alt="slide_image" />
+                </SwiperSlide>
+
+                <div className="slider-controler">
+                    <div className="swiper-button-prev slider-arrow">
+                        <svg className="arrow-back-outline"></svg>
+                    </div>
+                    <div className="swiper-button-next slider-arrow">
+                        <svg className="arrow-forward-outline"></svg>
+                    </div>
+                    <div className="swiper-pagination"></div>
+                </div>
+            </Swiper>
+        </div>
     )
 }

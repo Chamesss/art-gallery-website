@@ -15,7 +15,8 @@ export default function Product({ params }: { params: { id: string } }) {
         )
     return (
         <main className="flex flex-1 flex-col items-center justify-end overflow-hidden">
-            <Slider model={model} />
+            {/* <Slider model={model} /> */}
+            <Slider />
         </main>
     )
 }
