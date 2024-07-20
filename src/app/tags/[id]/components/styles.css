@@ -1,19 +1,4 @@
-.swiper_container {
-    height: 30rem;
-    padding: 2rem 0;
-    position: relative;
-    width: 100%;
-    overflow: visible !important;
-}
-
-.swiper-slide {
-    width: 35rem;
-    height: 30rem;
-    position: relative;
-    scale: 1;
-}
-
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .swiper_container {
         height: 47rem;
     }
@@ -25,7 +10,7 @@
         width: 28rem !important;
         height: 36rem !important;
     }
-}
+} */
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -101,7 +86,7 @@
     position: relative;
     width: 15rem !important;
     bottom: 1rem;
-    transform: translateY(7rem) !important;
+    transform: translateY(9rem) !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

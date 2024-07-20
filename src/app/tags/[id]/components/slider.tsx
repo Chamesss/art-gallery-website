@@ -60,8 +60,8 @@ export default function SliderPrototype() {
 
     return (
         <div className="mt-[5rem] flex flex-col items-center justify-center xl:flex-row xl:justify-evenly">
-            <div className="flex h-auto w-[35rem] justify-center">
-                <div className="w-[100%] -translate-y-[4rem] xl:w-[70%] xl:translate-x-[4rem]">
+            {/* <div className="flex h-auto w-[100%] justify-center bg-green-500">
+                <div className="w-[100%] -translate-y-[4rem] xl:w-[70%] xl:translate-x-[4rem] text-wrap">
                     <Fade contentCnt={contentCnt}>
                         <p className="mb-12 mt-8 font-outfit text-[4rem] font-semibold tracking-wider">
                             {content[contentCnt].title}
@@ -73,8 +73,8 @@ export default function SliderPrototype() {
                         ))}
                     </Fade>
                 </div>
-            </div>
-            <div className="container relative mx-auto max-w-[60rem] overflow-hidden px-4 py-16 before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:top-0 before:z-50 before:w-16 before:bg-gradient-to-r before:from-slate-100 before:via-slate-100 before:to-transparent after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:top-0 after:z-50 after:w-16 after:bg-gradient-to-l after:from-slate-100 after:via-slate-100 after:to-transparent dark:before:from-[#2b2b2b] dark:before:via-[#2b2b2b] dark:after:from-[#2b2b2b] dark:after:via-[#2b2b2b]">
+            </div> */}
+            <div className="!-py-[20rem] xs:!scale-[0.60] relative mx-auto !w-fit max-w-[60rem] !scale-50 overflow-visible px-4 before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:top-0 before:z-50 before:w-16 before:bg-gradient-to-r before:to-transparent after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:top-0 after:z-50 after:w-16 after:bg-gradient-to-l after:to-transparent sm:!scale-[0.75] lg:!scale-100 lg:py-4">
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -82,16 +82,27 @@ export default function SliderPrototype() {
                     loop={true}
                     slidesPerView={3}
                     coverflowEffect={{
-                        rotate: 0,
-                        stretch: 10,
-                        depth: 100,
-                        modifier: 4,
+                        rotate: 2,
+                        stretch: 0,
+                        depth: 10,
+                        modifier: 100,
                         slideShadows: true,
                     }}
-                    onSlideChange={(swiper: any) => {
+                    initialSlide={4}
+                    onRealIndexChange={(swiper: any) => {
                         setState(Number(swiper.realIndex) + 1)
-                        console.log(swiper)
                     }}
+                    // breakpoints={{
+                    //     950: {
+                    //         coverflowEffect: {
+                    //             rotate: 0,
+                    //             stretch: 10,
+                    //             depth: 100,
+                    //             modifier: 4,
+                    //             slideShadows: true,
+                    //         },
+                    //     },
+                    // }}
                     // coverflowEffect={{
                     //     rotate: 2,
                     //     stretch: 2,
@@ -105,26 +116,76 @@ export default function SliderPrototype() {
                         prevEl: '.swiper-button-prev',
                     }}
                     modules={[EffectCoverflow, Pagination, Navigation]}
-                    className="swiper_container"
+                    className="!overflow-visible"
                 >
                     {placeHolderImages.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <Image
-                                src={image}
-                                alt="slide_image"
+                            <div
                                 className={clsx(
-                                    '!h-[28rem] w-full rounded-[2rem] object-cover transition-all',
-                                    index === Number(state)
-                                        ? 'scale-125 !brightness-100'
-                                        : 'scale-90 !brightness-50'
+                                    'relative h-full w-full !overflow-hidden transition-all',
+                                    index === state && '!overflow-visible'
                                 )}
-                                width={1024}
-                                height={1024}
-                                priority={true}
-                            />
+                            >
+                                <Image
+                                    src={image}
+                                    alt="slide_image"
+                                    className={clsx(
+                                        'z-0 !h-[25rem] !w-[20rem] rounded-none object-cover transition-all',
+                                        Number(state) === 6
+                                            ? (index === 0 && 'block') ||
+                                                  (index === 5 && 'block') ||
+                                                  (index === Number(state) &&
+                                                      'block') ||
+                                                  'hidden'
+                                            : Number(state) === 0
+                                              ? (index === 6 && 'block') ||
+                                                (index === 1 && 'block') ||
+                                                (index === Number(state) &&
+                                                    'block') ||
+                                                'hidden]'
+                                              : (index === Number(state) - 1 &&
+                                                    'block') ||
+                                                (index === Number(state) &&
+                                                    'block') ||
+                                                (index === Number(state) + 1 &&
+                                                    'block') ||
+                                                'hidden'
+                                    )}
+                                    width={1024}
+                                    height={1024}
+                                    priority={true}
+                                />
+                                <div
+                                    className={clsx(
+                                        'absolute left-1/2 top-1/2 z-10 m-auto !h-[25rem] !w-[20rem] -translate-x-1/2 -translate-y-1/2 scale-110 transition-all',
+                                        Number(state) === 6
+                                            ? (index === 0 &&
+                                                  'bg-[#2b2b2b]/50') ||
+                                                  (index === 5 &&
+                                                      'bg-[#2b2b2b]/50') ||
+                                                  (index === Number(state) &&
+                                                      'bg-slate-100/0 dark:bg-[#2b2b2b]/0') ||
+                                                  'bg-slate-100 dark:bg-[#2b2b2b]'
+                                            : Number(state) === 0
+                                              ? (index === 6 &&
+                                                    'bg-[#2b2b2b]/50') ||
+                                                (index === 1 &&
+                                                    'bg-[#2b2b2b]/50') ||
+                                                (index === Number(state) &&
+                                                    'bg-slate-100/0 dark:bg-[#2b2b2b]/0') ||
+                                                'bg-slate-100 dark:bg-[#2b2b2b]'
+                                              : (index === Number(state) - 1 &&
+                                                    'bg-[#2b2b2b]/50') ||
+                                                (index === Number(state) &&
+                                                    'bg-slate-100/0 dark:bg-green-500/0') ||
+                                                (index === Number(state) + 1 &&
+                                                    'bg-[#2b2b2b]/50') ||
+                                                'bg-slate-100 dark:bg-[#2b2b2b]'
+                                    )}
+                                />
+                            </div>
                         </SwiperSlide>
                     ))}
-
                     <div className="slider-controler">
                         <div className="swiper-button-prev slider-arrow">
                             <svg className="arrow-back-outline"></svg>
