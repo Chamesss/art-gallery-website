@@ -93,10 +93,15 @@
 }
 
 .swiper-pagination {
+    display: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     width: 15rem !important;
     bottom: 1rem;
-    transform: translateY(3rem) !important;
+    transform: translateY(7rem) !important;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

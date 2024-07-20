@@ -59,9 +59,9 @@ export default function SliderPrototype() {
     }, [])
 
     return (
-        <div className="mt-[5rem] flex flex-row items-center justify-evenly">
+        <div className="mt-[5rem] flex flex-col items-center justify-center xl:flex-row xl:justify-evenly">
             <div className="flex h-auto w-[35rem] justify-center">
-                <div className="w-[70%] -translate-y-[4rem] translate-x-[4rem]">
+                <div className="w-[100%] -translate-y-[4rem] xl:w-[70%] xl:translate-x-[4rem]">
                     <Fade contentCnt={contentCnt}>
                         <p className="mb-12 mt-8 font-outfit text-[4rem] font-semibold tracking-wider">
                             {content[contentCnt].title}

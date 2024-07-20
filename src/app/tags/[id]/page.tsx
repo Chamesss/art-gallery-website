@@ -1,3 +1,4 @@
+import { Separator } from '@/components/ui/separator'
 import { products } from '@/lib/data'
 import Link from 'next/link'
 import React from 'react'
@@ -17,6 +18,7 @@ export default function Product({ params }: { params: { id: string } }) {
         <main className="flex flex-1 flex-col items-center justify-end overflow-hidden">
             {/* <Slider model={model} /> */}
             <Slider />
+            <Separator className="my-10" />
         </main>
     )
 }
