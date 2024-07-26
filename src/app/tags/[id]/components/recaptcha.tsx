@@ -7,7 +7,7 @@ export default function Recaptcha({
     onVerify: (value: any) => void
 }) {
     const recaptchaRef = useRef() as RefObject<ReCAPTCHA>
-    const appKey = process.env.NEXT_PUBLIC_RECAPTCHA_APP_KEY
+    const appKey = process.env.RECAPTCHA_APP_KEY
     const handleChange = (value: any) => {
         onVerify(value)
     }
