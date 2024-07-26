@@ -2,6 +2,8 @@ import { Separator } from '@/components/ui/separator'
 import { products } from '@/lib/data'
 import Link from 'next/link'
 import React from 'react'
+import AdditionalInfo from './components/additional-info'
+import PurchaseForm from './components/purchase-form'
 import Slider from './components/slider'
 
 export default function Product({ params }: { params: { id: string } }) {
@@ -16,9 +18,13 @@ export default function Product({ params }: { params: { id: string } }) {
         )
     return (
         <main className="flex flex-1 flex-col items-center justify-end overflow-hidden">
-            {/* <Slider model={model} /> */}
-            <Slider />
-            <Separator className="my-10" />
+            <div className="mb-10 flex w-full max-w-7xl flex-col">
+                <Slider />
+                <Separator className="my-10" />
+                <AdditionalInfo />
+                <Separator className="my-10" />
+                <PurchaseForm />
+            </div>
         </main>
     )
 }
