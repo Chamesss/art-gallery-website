@@ -17,10 +17,12 @@ export default function Recaptcha({
     }
 
     return (
-        <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={appKey}
-            onChange={handleChange}
-        />
+        <div className="flex scale-[0.75] items-center justify-center xs:scale-100">
+            <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={appKey}
+                onChange={handleChange}
+            />
+        </div>
     )
 }

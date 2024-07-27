@@ -48,7 +48,10 @@ export default function PurchaseForm() {
     }
 
     return (
-        <div className="mx-auto w-[80%] px-4 sm:px-6 lg:px-8">
+        <div
+            id="purchase"
+            className="mx-auto w-[90%] max-w-2xl px-0 sm:px-6 lg:w-[80%] lg:max-w-full lg:px-8"
+        >
             <Card>
                 <CardHeader>
                     <CardTitle>Purchase Form</CardTitle>
@@ -57,7 +60,7 @@ export default function PurchaseForm() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <form className="grid gap-4">
+                    <form className="flex flex-col gap-4">
                         <div className="grid gap-2">
                             <Label htmlFor="name">Name</Label>
                             <Input
@@ -66,6 +69,7 @@ export default function PurchaseForm() {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 required
+                                className="w-auto min-w-11"
                             />
                         </div>
                         <div className="grid gap-2">
