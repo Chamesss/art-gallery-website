@@ -9,16 +9,18 @@ import SectionDivider from '@/components/utils/section-divider'
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center">
+        <main className="flex flex-col items-center justify-center">
             <Header />
             <Hero />
             <Marquee />
-            <ProductCardSection />
-            <SectionDivider />
-            <ProductContainerSection />
-            <AboutUs />
-            <SectionDivider />
-            <From />
+            <div className="flex flex-col items-center justify-center px-4">
+                <ProductCardSection />
+                <SectionDivider />
+                <ProductContainerSection />
+                <AboutUs />
+                <SectionDivider />
+                <From />
+            </div>
         </main>
     )
 }

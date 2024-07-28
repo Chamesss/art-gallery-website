@@ -15,7 +15,7 @@ export default function ProductCard({
     const ref = useRef<HTMLDivElement>(null)
     const isInView = useInView(ref, { once: true })
     return (
-        <Link href={`/tags/${id}`}>
+        <Link href={`/tags/${id}`} className="w-full max-w-[22rem]">
             <motion.div
                 ref={ref}
                 style={{
@@ -28,9 +28,9 @@ export default function ProductCard({
                     transition:
                         'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
                 }}
-                className="flex h-auto w-auto items-center justify-center rounded-lg bg-red-300"
+                className="flex h-auto w-auto items-center justify-center rounded-lg"
             >
-                <Card className="w-[350px] overflow-hidden rounded-lg bg-[#1a1a1a] text-white shadow-xl">
+                <Card className="w-full overflow-hidden rounded-lg bg-[#1a1a1a] text-white shadow-xl lg:w-[350px]">
                     <Image
                         src="/placeholder.svg"
                         width={500}

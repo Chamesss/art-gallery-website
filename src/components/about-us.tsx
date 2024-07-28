@@ -14,7 +14,7 @@ export default function AboutUs() {
     return (
         <motion.section
             ref={ref}
-            className="mb-16 mt-[8rem] w-[65rem] scroll-mt-28 text-center leading-8 sm:mb-16"
+            className="mb-16 mt-[8rem] scroll-mt-28 text-center leading-8 sm:mb-16 lg:w-[65rem]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.175 }}
@@ -23,7 +23,7 @@ export default function AboutUs() {
             <SectionHeading>About Us</SectionHeading>
             <div
                 ref={Ref}
-                className="flex flex-row items-center justify-between gap-10"
+                className="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row"
             >
                 <motion.div
                     style={{
@@ -48,14 +48,14 @@ export default function AboutUs() {
                         transition:
                             'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
                     }}
-                    className="!h-[30rem] !w-[30rem]"
+                    className="lg:!h-[30rem] lg:!w-[30rem]"
                 >
                     <Image
                         src={'/placeholder.svg'}
                         width={1024}
                         height={1024}
                         alt="about-us"
-                        className="!h-[30rem] !w-[30rem] rounded-md"
+                        className="h-[20rem] w-auto rounded-md lg:!h-[30rem] lg:!w-[30rem]"
                     />
                 </motion.div>
             </div>

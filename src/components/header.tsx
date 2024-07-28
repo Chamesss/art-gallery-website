@@ -1,10 +1,10 @@
 'use client'
-import { motion } from 'framer-motion'
-import { links } from '@/lib/data'
-import Link from 'next/link'
-import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context'
+import { links } from '@/lib/data'
 import { useScrollPosition } from '@/lib/hooks'
+import clsx from 'clsx'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Header() {
     const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -29,7 +29,7 @@ export default function Header() {
                         >
                             <Link
                                 className={clsx(
-                                    `flex w-full items-center justify-center p-3 font-medium text-zinc-800 transition-all hover:text-gray-950 dark:text-white dark:hover:text-gray-300`,
+                                    `w-full items-center hidden lg:flex justify-center p-3 font-medium text-zinc-800 transition-all hover:text-gray-950 dark:text-white dark:hover:text-gray-300`,
                                     {
                                         '!font-bold':
                                             activeSection === link.name,

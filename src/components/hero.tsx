@@ -18,7 +18,7 @@ export default function Hero() {
         <section
             id="home"
             ref={ref}
-            className="flex h-full w-full items-center justify-center overflow-hidden"
+            className="flex h-full w-screen items-center justify-center overflow-hidden"
         >
             <Swiper
                 spaceBetween={0}
@@ -45,15 +45,18 @@ export default function Hero() {
                 {products.map((p, i) => (
                     <SwiperSlide
                         key={i}
-                        className="bg-transparent! relative !h-[93vh] !w-screen"
+                        className="bg-transparent! relative !h-[93vh] w-auto lg:!w-screen"
                     >
-                        <div className="absolute left-1/2 top-1/2 z-20 w-fit -translate-x-1/2 -translate-y-1/2 transform">
-                            <div className="flex flex-row items-center justify-center space-x-[8rem]">
-                                <div className="flex h-[22rem] !w-[22rem] flex-col items-center justify-evenly">
-                                    <p className="text-center text-2xl font-semibold text-white">
+                        <div className="absolute left-1/2 top-1/2 z-20 w-full -translate-x-1/2 -translate-y-1/2 transform lg:w-fit">
+                            <p className="block text-center text-2xl font-semibold text-white lg:hidden">
+                                {p.title}
+                            </p>
+                            <div className="flex w-full flex-col-reverse items-center justify-center space-y-[2rem] lg:flex-row lg:space-x-[8rem]">
+                                <div className="my-4 flex w-full max-w-[15rem] flex-col items-center justify-evenly lg:my-0 lg:h-[22rem] lg:!w-[22rem] lg:max-w-full">
+                                    <p className="hidden text-center text-2xl font-semibold text-white lg:block">
                                         {p.title}
                                     </p>
-                                    <p className="text-white">
+                                    <p className="text-center text-sm text-white lg:text-start">
                                         {p.description}
                                     </p>
                                 </div>
@@ -63,7 +66,7 @@ export default function Hero() {
                                     priority={true}
                                     alt={p.title}
                                     src={p.pictures[0]}
-                                    className="z-10 !h-[22rem] !w-[22rem] !rounded-sm object-fill"
+                                    className="z-10 !mx-auto h-[15rem] w-[15rem] !rounded-sm object-fill lg:!h-[22rem] lg:!w-[22rem]"
                                 />
                             </div>
                         </div>

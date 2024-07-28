@@ -10,7 +10,7 @@ export default function Marquee() {
     ]
 
     return (
-        <div className="flex h-[14rem] w-full items-center justify-center bg-black">
+        <div className="flex h-[14rem] w-screen items-center justify-center bg-black">
             <MarqueeComponent
                 gradient={true}
                 pauseOnHover={true}
