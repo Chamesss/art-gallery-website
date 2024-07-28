@@ -53,11 +53,12 @@ export default function Hero() {
                             </p>
                             <div className="flex w-full flex-col-reverse items-center justify-center space-x-0 space-y-[2rem] lg:flex-row lg:!space-x-[8rem] lg:space-y-0">
                                 <div className="my-4 flex w-full max-w-[15rem] flex-col items-center justify-evenly lg:my-0 lg:h-[22rem] lg:!w-[22rem] lg:max-w-full">
-                                    <p className="hidden text-center text-2xl font-semibold text-white lg:block">
+                                    <p className="hidden text-center text-6xl font-semibold text-white lg:block">
                                         {p.title}
                                     </p>
-                                    <p className="text-center text-sm text-white lg:text-start">
-                                        {p.description}
+                                    <p className="text-medium mt-10 text-center text-white lg:mt-0 lg:text-start lg:text-xl">
+                                        Personalized Collections of Original
+                                        Artworks & Paintings
                                     </p>
                                 </div>
                                 <Image

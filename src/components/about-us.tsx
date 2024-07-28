@@ -20,7 +20,9 @@ export default function AboutUs() {
             transition={{ delay: 0.175 }}
             id="about"
         >
-            <SectionHeading>About Us</SectionHeading>
+            <div className="transform">
+                <SectionHeading>About Us</SectionHeading>
+            </div>
             <div
                 ref={Ref}
                 className="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row"
@@ -33,7 +35,7 @@ export default function AboutUs() {
                             'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
                     }}
                 >
-                    <p className="max-w-[28rem] text-wrap text-lg">
+                    <p className="max-w-[28rem] text-wrap text-xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Maxime eaque officiis ad, perspiciatis cum, voluptas
                         obcaecati assumenda natus, soluta provident ullam porro?
@@ -51,11 +53,12 @@ export default function AboutUs() {
                     className="lg:!h-[30rem] lg:!w-[30rem]"
                 >
                     <Image
-                        src={'/placeholder.svg'}
+                        src={'/placeholder/workshop.jpg'}
+                        priority={true}
                         width={1024}
                         height={1024}
                         alt="about-us"
-                        className="h-[20rem] w-auto rounded-md lg:!h-[30rem] lg:!w-[30rem]"
+                        className="mt-[5rem] h-[20rem] w-auto rounded-none object-cover lg:mt-0 lg:!h-[30rem] lg:!w-[30rem]"
                     />
                 </motion.div>
             </div>

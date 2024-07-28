@@ -19,7 +19,7 @@ export default function Product({ params }: { params: { id: string } }) {
         )
     return (
         <main className="flex flex-1 flex-col items-center justify-end overflow-hidden">
-            <div className="mb-10 flex w-full max-w-7xl flex-col px-2 lg:mt-[5rem]">
+            <div className="-mt-[2.5rem] mb-10 flex w-full max-w-7xl flex-col px-2 lg:mt-[5rem]">
                 <div className="mx-auto mt-[5rem] w-full max-w-xl px-6 text-start lg:hidden">
                     <h1 className="text-3xl font-bold md:text-4xl">
                         Starry Night

@@ -8,15 +8,11 @@ import { useSectionInView } from '@/lib/hooks'
 export default function From() {
     const { ref } = useSectionInView('Contact Us', 0.5)
     return (
-        <section
-            ref={ref}
-            id="contact"
-            className="w-full py-10 lg:py-10"
-        >
+        <section ref={ref} id="contact" className="w-full py-10 lg:py-10">
             <div className="container max-w-4xl px-4 md:px-6">
                 <div className="space-y-6 text-center">
                     <div className="space-y-16">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                        <h2 className="text-3xl font-bold tracking-tighter text-amber-500 sm:text-4xl md:text-5xl">
                             Get in Touch
                         </h2>
                         <p className="text-muted-foreground md:text-xl">
@@ -32,6 +28,7 @@ export default function From() {
                                 <Input
                                     id="name"
                                     placeholder="Enter your name"
+                                    className="border-white/50 dark:bg-zinc-950"
                                 />
                             </div>
                             <div className="flex flex-col items-start space-y-2">
@@ -40,6 +37,7 @@ export default function From() {
                                     id="email"
                                     type="email"
                                     placeholder="Enter your email"
+                                    className="border-white/50 dark:bg-zinc-950"
                                 />
                             </div>
                         </div>
@@ -48,10 +46,13 @@ export default function From() {
                             <Textarea
                                 id="message"
                                 placeholder="Enter your message"
-                                className="min-h-[120px]"
+                                className="min-h-[120px] border-white/50 dark:bg-zinc-950"
                             />
                         </div>
-                        <Button type="submit" className="justify-center">
+                        <Button
+                            type="submit"
+                            className="justify-center bg-amber-500 text-white hover:bg-amber-600"
+                        >
                             Submit
                         </Button>
                     </form>

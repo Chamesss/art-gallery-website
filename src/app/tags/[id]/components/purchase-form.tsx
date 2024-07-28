@@ -52,7 +52,7 @@ export default function PurchaseForm() {
             id="purchase"
             className="mx-auto w-[90%] max-w-2xl px-0 sm:px-6 lg:w-[80%] lg:max-w-full lg:px-8"
         >
-            <Card>
+            <Card className="rounded-none border-none dark:bg-black">
                 <CardHeader>
                     <CardTitle>Purchase Form</CardTitle>
                     <CardDescription>
@@ -69,7 +69,7 @@ export default function PurchaseForm() {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 required
-                                className="w-auto min-w-11"
+                                className="w-auto min-w-11 border-white/50 dark:bg-zinc-950"
                             />
                         </div>
                         <div className="grid gap-2">
@@ -80,6 +80,7 @@ export default function PurchaseForm() {
                                 value={formData.address}
                                 onChange={handleInputChange}
                                 required
+                                className="border-white/50 dark:bg-zinc-950"
                             />
                         </div>
                         <div className="grid gap-2">
@@ -91,6 +92,7 @@ export default function PurchaseForm() {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 required
+                                className="border-white/50 dark:bg-zinc-950"
                             />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
@@ -102,6 +104,7 @@ export default function PurchaseForm() {
                                     value={formData.city}
                                     onChange={handleInputChange}
                                     required
+                                    className="border-white/50 dark:bg-zinc-950"
                                 />
                             </div>
                             <div className="grid gap-2">
@@ -113,6 +116,7 @@ export default function PurchaseForm() {
                                     value={formData.zip}
                                     onChange={handleInputChange}
                                     required
+                                    className="border-white/50 dark:bg-zinc-950"
                                 />
                             </div>
                         </div>
@@ -153,7 +157,7 @@ export default function PurchaseForm() {
                 <CardFooter>
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
-                            <Button type="submit">Place Order</Button>
+                            <Button className='text-white bg-amber-500 hover:bg-amber-600' type="submit">Place Order</Button>
                         </AlertDialogTrigger>
                         <AlertDialogContent>
                             <AlertDialogHeader>

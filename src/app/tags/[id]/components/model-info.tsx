@@ -46,7 +46,12 @@ export default function ModelInfo() {
                 </div>
             </div>
             <div className="flex gap-4">
-                <Button onClick={scrollIntoView}>Purchase</Button>
+                <Button
+                    className="bg-amber-500 text-white hover:bg-amber-600"
+                    onClick={scrollIntoView}
+                >
+                    Purchase
+                </Button>
             </div>
         </div>
     )

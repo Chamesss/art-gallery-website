@@ -5,7 +5,7 @@ import { Input } from './ui/input'
 
 export default function Footer() {
     return (
-        <footer className="bg-muted py-12 text-muted-foreground">
+        <footer className="bg-zinc-800 py-12 text-muted-foreground">
             <div className="container grid max-w-[80rem] grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-4">
                 <div className="flex flex-col items-start gap-4">
                     <Link
@@ -91,15 +91,20 @@ export default function Footer() {
                         <Input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-1"
+                            className="flex-1 border-white/50 dark:bg-zinc-950"
                         />
-                        <Button type="submit">Subscribe</Button>
+                        <Button
+                            className="bg-amber-500 text-white hover:bg-amber-600"
+                            type="submit"
+                        >
+                            Subscribe
+                        </Button>
                     </form>
                 </div>
             </div>
             <div className="mt-12 border-t pt-6 text-xs">
                 <div className="container flex max-w-5xl items-center justify-between">
-                    <p>&copy; 2024 Acme Inc. All rights reserved.</p>
+                    <p>&copy; 2024 Thot Arts. All rights reserved.</p>
                     <nav className="flex items-center gap-4">
                         <Link
                             href="#"

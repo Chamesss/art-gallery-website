@@ -4,7 +4,7 @@ import React from 'react'
 export default function AdditionalInfo() {
     return (
         <div className="mx-auto w-[90%] max-w-2xl px-0 sm:px-6 lg:w-[80%] lg:max-w-full lg:px-8">
-            <Card>
+            <Card className="rounded-none border-none dark:bg-black">
                 <CardHeader>
                     <CardTitle>Additional Info</CardTitle>
                 </CardHeader>

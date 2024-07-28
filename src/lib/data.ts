@@ -23,55 +23,54 @@ export const links = [
 
 export const products: Product[] = [
     {
-        id: "hrMBp1EPXCarNZRGcZivS",
+        id: 'hrMBp1EPXCarNZRGcZivS',
         title: 'Model 1',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        pictures: ['https://swiperjs.com/demos/images/nature-1.jpg'],
+        pictures: ['/placeholder/ph_1.jpg'],
         width: 20,
         height: 20,
         tokens: ['Token1', 'Token2', 'Token3'],
     },
     {
-        id: "VBKy-tnCdXfzl-TeNSutV",
+        id: 'VBKy-tnCdXfzl-TeNSutV',
         title: 'Model 2',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        pictures: ['https://swiperjs.com/demos/images/nature-2.jpg'],
+        pictures: ['/placeholder/ph_0.jpg'],
         width: 20,
         height: 20,
         tokens: ['Token4', 'Token5', 'Token6'],
     },
     {
-        id: "KLm-IuknYKltxEgQ_Lw_B",
+        id: 'KLm-IuknYKltxEgQ_Lw_B',
         title: 'Model 3',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        pictures: ['https://swiperjs.com/demos/images/nature-3.jpg'],
+        pictures: ['/placeholder/ph_2.jpg'],
         width: 20,
         height: 20,
         tokens: ['Token7', 'Token8', 'Token9'],
     },
-
 ]
 
 export const productsOverview: ProductOverview[] = [
     {
-        title: "Model 1",
+        title: 'Model 1',
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        imageUrl: '/placeholder.svg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+        imageUrl: '/placeholder/ph_0.jpg',
     },
     {
-        title: "Model 2",
+        title: 'Model 2',
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        imageUrl: '/placeholder.svg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+        imageUrl: '/placeholder/ph_1.jpg',
     },
     {
-        title: "Model 3",
+        title: 'Model 3',
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        imageUrl: '/placeholder.svg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+        imageUrl: '/placeholder/ph_2.jpg',
     },
-];
+]
