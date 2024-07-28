@@ -21,7 +21,7 @@ export default function Marquee() {
                     {marqueeKeywords.map((keyword, index) => (
                         <span
                             key={index}
-                            className="text-medium mx-4 w-fit text-white lg:text-4xl"
+                            className="mx-4 w-fit text-xl text-white lg:text-4xl"
                         >
                             {keyword}
                         </span>
