@@ -33,8 +33,9 @@ export default function ProductContainer({
                         {description}
                     </p>
                 </div>
+                {/* to remove hidden ? */}
                 <Image
-                    className="group-even:-right-[initial] w-[15rem] rounded-t-lg shadow-2xl transition group-even:-left-0 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block lg:absolute lg:-right-0 lg:top-8 lg:w-[20rem]"
+                    className="group-even:-right-[initial] hidden w-[15rem] rounded-t-lg shadow-2xl transition group-even:-left-0 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block lg:absolute lg:-right-0 lg:top-8 lg:w-[20rem]"
                     src={imageUrl}
                     alt={title}
                     width={640}
