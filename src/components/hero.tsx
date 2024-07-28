@@ -51,7 +51,7 @@ export default function Hero() {
                             <p className="block text-center text-2xl font-semibold text-white lg:hidden">
                                 {p.title}
                             </p>
-                            <div className="flex w-full flex-col-reverse items-center justify-center space-y-[2rem] lg:flex-row lg:space-x-[8rem]">
+                            <div className="flex w-full flex-col-reverse items-center justify-center space-x-0 space-y-[2rem] lg:flex-row lg:!space-x-[8rem] lg:space-y-0">
                                 <div className="my-4 flex w-full max-w-[15rem] flex-col items-center justify-evenly lg:my-0 lg:h-[22rem] lg:!w-[22rem] lg:max-w-full">
                                     <p className="hidden text-center text-2xl font-semibold text-white lg:block">
                                         {p.title}
@@ -66,7 +66,7 @@ export default function Hero() {
                                     priority={true}
                                     alt={p.title}
                                     src={p.pictures[0]}
-                                    className="z-10 !mx-auto h-[15rem] w-[15rem] !rounded-sm object-fill lg:!h-[22rem] lg:!w-[22rem]"
+                                    className="z-10 h-[15rem] w-[15rem] !rounded-sm object-fill lg:!h-[22rem] lg:!w-[22rem]"
                                 />
                             </div>
                         </div>

@@ -8,12 +8,12 @@ import SectionHeading from './utils/section-heading'
 export default function ProductCardSection() {
     const { ref } = useSectionInView('Products')
     return (
-        <section className="mt-20 flex w-full max-w-[65rem] flex-col items-center justify-center">
+        <section className="!mx-auto mt-20 flex w-full max-w-[65rem] flex-col items-center justify-center">
             <SectionHeading>Products</SectionHeading>
             <div
                 id="products"
                 ref={ref}
-                className="flex w-full scroll-mt-28 flex-col items-center justify-around gap-10 py-16 lg:flex-row lg:px-4"
+                className="!mx-auto flex w-full scroll-mt-28 flex-col items-center justify-center gap-10 py-16 lg:flex-row lg:px-4"
             >
                 {models.map((model, i) => (
                     <ProductCard key={model.id} id={model.id} index={i} />
