@@ -11,7 +11,7 @@ export default function ProductContainerSection() {
         <div
             ref={ref}
             id="concept"
-            className="flex min-h-[40rem] w-full flex-col items-center gap-10"
+            className="flex min-h-[40rem] w-full flex-col items-center gap-10 overflow-hidden"
         >
             <SectionHeading>Concept</SectionHeading>
             {productsOverview.map((product, i) => (

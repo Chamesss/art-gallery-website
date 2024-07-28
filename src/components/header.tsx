@@ -14,7 +14,7 @@ export default function Header() {
     return (
         <header className="relative z-[999]">
             <nav
-                className={`fixed left-1/2 top-[0.15rem] flex h-12 w-full -translate-x-1/2 items-center justify-around py-2 transition-all duration-300 sm:top-[0rem] sm:h-[initial] sm:py-8 ${
+                className={`fixed left-1/2 top-0 flex h-14 w-full -translate-x-1/2 items-center justify-around py-2 transition-all duration-300 sm:top-[0rem] sm:h-[initial] sm:py-8 lg:top-[0.15rem] lg:h-12 ${
                     isAtTop === false && 'bg-black/35 sm:!py-4'
                 }`}
             >
@@ -29,7 +29,7 @@ export default function Header() {
                         >
                             <Link
                                 className={clsx(
-                                    `w-full items-center hidden lg:flex justify-center p-3 font-medium text-zinc-800 transition-all hover:text-gray-950 dark:text-white dark:hover:text-gray-300`,
+                                    `hidden w-full items-center justify-center p-3 font-medium text-zinc-800 transition-all hover:text-gray-950 dark:text-white dark:hover:text-gray-300 lg:flex`,
                                     {
                                         '!font-bold':
                                             activeSection === link.name,

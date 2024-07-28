@@ -8,7 +8,7 @@ import SectionHeading from './utils/section-heading'
 export default function ProductCardSection() {
     const { ref } = useSectionInView('Products')
     return (
-        <section className="!mx-auto mt-20 flex w-full max-w-[65rem] flex-col items-center justify-center">
+        <section className="!mx-auto mt-20 flex w-full max-w-[65rem] flex-col items-center justify-center overflow-hidden">
             <SectionHeading>Products</SectionHeading>
             <div
                 id="products"
