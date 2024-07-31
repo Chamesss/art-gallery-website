@@ -93,3 +93,7 @@
 .fade-exit-active {
     transition: opacity 600ms;
 }
+
+.margin {
+    display: hidden;
+}

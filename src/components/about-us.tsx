@@ -25,7 +25,7 @@ export default function AboutUs() {
             </div>
             <div
                 ref={Ref}
-                className="flex flex-col-reverse items-center justify-between gap-10 lg:flex-row"
+                className="flex px-2 flex-col-reverse items-center justify-between gap-10 lg:flex-row"
             >
                 <motion.div
                     style={{

@@ -15,10 +15,6 @@ export default function Footer() {
                     >
                         <span className="font-bold">Thot Arts.</span>
                     </Link>
-                    <p className="text-sm">
-                        Beautifully designed components that you can copy and
-                        paste into your apps.
-                    </p>
                 </div>
                 <div className="grid gap-2">
                     <h4 className="text-sm font-semibold">Quick Links</h4>
@@ -102,8 +98,8 @@ export default function Footer() {
                     </form>
                 </div>
             </div>
-            <div className="mt-12 border-t pt-6 text-xs">
-                <div className="container flex max-w-5xl items-center justify-between">
+            <div className="mt-12 pt-6 text-xs">
+                <div className="px-4 flex max-w-5xl items-center justify-between">
                     <p>&copy; 2024 Thot Arts. All rights reserved.</p>
                     <nav className="flex items-center gap-4">
                         <Link

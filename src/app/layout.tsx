@@ -36,10 +36,11 @@ export default function RootLayout({
                 className={`${josefin_sans.className} scrollbar-container relative flex h-full min-h-screen flex-col bg-slate-100 text-gray-950 dark:bg-zinc-950 dark:text-gray-50 dark:text-opacity-90`}
             >
                 <div className="relative overflow-visible">
-                    <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#000000] blur-[10rem] dark:bg-[#ffffff30] sm:w-[68.75rem]" />
+                    {/* <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#000000] blur-[10rem] dark:bg-[#ffffff30] sm:w-[68.75rem]" />
                     <div className="absolute left-[-35rem] top-[25%] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#00000053] blur-[10rem] dark:bg-[#ffffff30] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]" />
                     <div className="absolute left-[-35rem] top-[50%] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#0000003f] blur-[10rem] dark:bg-[#ffffff30] sm:w-[68.75rem] md:left-[-33rem] lg:left-0 xl:right-20 2xl:right-20" />
                     <div className="absolute bottom-[25%] right-[11rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#0000003f] blur-[10rem] dark:bg-[#ffffff30] sm:w-[68.75rem]" />
+                    */}
                     <ThemeProvider>
                         <ActiveSectionContextProvider>
                             <div className="flex flex-1 flex-col">

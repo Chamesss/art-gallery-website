@@ -10,18 +10,18 @@ export default function Marquee() {
     ]
 
     return (
-        <div className="flex h-[7rem] w-screen items-center justify-center bg-black lg:h-[14rem]">
+        <div className="flex h-[7rem] w-full lg:h-[14rem]">
             <MarqueeComponent
                 gradient={true}
                 pauseOnHover={true}
                 gradientColor="black"
-                className="flex items-center lg:items-stretch"
+                className="flex flex-1 !w-full bg-black"
             >
-                <div className="flex justify-around font-outfit opacity-75 lg:w-screen">
+                <div className="flex font-outfit opacity-75 bg-black lg:!w-[100vw] !flex-1 justify-around self-stretch">
                     {marqueeKeywords.map((keyword, index) => (
                         <span
                             key={index}
-                            className="mx-4 w-fit text-xl text-white lg:text-4xl"
+                            className="mx-4 w-auto text-xl text-white lg:text-4xl"
                         >
                             {keyword}
                         </span>
