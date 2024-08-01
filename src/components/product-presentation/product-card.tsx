@@ -18,10 +18,8 @@ export default function ProductCard({
     if (!painting) return null
 
     return (
-        <Link
-            scroll={false}
-            prefetch={true}
-            href={`/tags/${id}`}
+        <div
+            onClick={() => (window.location.href = `/tags/${id}`)}
             className="w-full max-w-[22rem]"
         >
             <motion.div
@@ -54,6 +52,6 @@ export default function ProductCard({
                     </p>
                 </div>
             </motion.div>
-        </Link>
+        </div>
     )
 }
