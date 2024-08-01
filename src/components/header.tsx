@@ -14,8 +14,8 @@ export default function Header() {
     return (
         <header className="relative z-[999]">
             <nav
-                className={`fixed left-1/2 top-0 flex h-14 w-full -translate-x-1/2 items-center justify-around py-2 transition-all duration-300 sm:top-[0rem] sm:h-[initial] sm:py-8 lg:top-[0.15rem] lg:h-12 ${
-                    isAtTop === false && 'bg-black/35 sm:!py-4'
+                className={`fixed left-1/2 py-4 top-0 flex h-14 w-full -translate-x-1/2 items-center justify-around transition-all duration-300 sm:top-[0rem] sm:h-[initial] ${
+                    isAtTop === false && 'bg-black/35 !py-6'
                 }`}
             >
                 <div className="px-4">Logo</div>

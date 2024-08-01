@@ -16,8 +16,14 @@ export default function ProductCard({
     const isInView = useInView(ref, { once: true })
     const painting = products.find((product) => product.id === id)
     if (!painting) return null
+
     return (
-        <Link href={`/tags/${id}`} className="w-full max-w-[22rem]">
+        <Link
+            scroll={false}
+            prefetch={true}
+            href={`/tags/${id}`}
+            className="w-full max-w-[22rem]"
+        >
             <motion.div
                 ref={ref}
                 style={{
@@ -41,16 +47,6 @@ export default function ProductCard({
                         className="mx-auto h-[25rem] w-auto object-cover"
                         priority={true}
                     />
-                    {/* <div className="p-4">
-                        <div className="text-center text-lg font-semibold">
-                            {painting.title}
-                        </div>
-                        <div className="mt-4 flex items-center justify-center">
-                            <Button className="border border-amber-500 bg-amber-500 text-white hover:bg-amber-600">
-                                Visit Page
-                            </Button>
-                        </div>
-                    </div> */}
                 </div>
                 <div>
                     <p className="font-serif text-xl font-semibold">
