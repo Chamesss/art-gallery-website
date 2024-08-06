@@ -4,17 +4,19 @@ import Header from '@/components/header'
 import Hero from '@/components/hero'
 import HeroV2 from '@/components/hero-v2'
 import Marquee from '@/components/marquee'
+import ParallaxScroll from '@/components/parallax-scroll'
 import ProductCardSection from '@/components/product-card-section'
 import ProductContainerSection from '@/components/product-container-section'
 import SectionDivider from '@/components/utils/section-divider'
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center justify-center">
+        <main className="relative flex flex-col items-center justify-center">
             <Header />
             <HeroV2 />
             {/* <Hero /> */}
             <Marquee />
+            <ParallaxScroll />
             <div className="flex flex-col items-center justify-center px-4">
                 <ProductCardSection />
                 <SectionDivider />
@@ -23,6 +25,7 @@ export default function Home() {
                 <SectionDivider />
                 <From />
             </div>
+            <div className="fixed bottom-0 left-0">Title</div>
         </main>
     )
 }

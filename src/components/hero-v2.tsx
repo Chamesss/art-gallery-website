@@ -9,6 +9,7 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
+import { useSectionInView } from '@/lib/hooks'
 import {
     Autoplay,
     EffectFade,
@@ -18,8 +19,13 @@ import {
 } from 'swiper/modules'
 
 export default function HeroV2() {
+    const { ref } = useSectionInView('Home', 0.5)
     return (
-        <section className="hero-slider hero-style !h-[95vh]">
+        <section
+            id="home"
+            ref={ref}
+            className="hero-slider hero-style !h-[95vh]"
+        >
             <Swiper
                 loop={true}
                 speed={1000}
@@ -63,7 +69,7 @@ export default function HeroV2() {
                                     data-swiper-parallax="400"
                                     className="slide-text"
                                 >
-                                    <p className="bg-black/60 text-white px-4 py-3">
+                                    <p className="bg-black/60 px-4 py-3 text-white">
                                         {p.description}
                                         <br />
                                         <br />

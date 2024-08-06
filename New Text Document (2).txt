@@ -1,0 +1,9 @@
+1) login to your account
+2) on the header section select "Domains"
+3) locate the domain and select "Manage"
+4) on the left navigation panel select "Domain Ownership"
+5) under "Move domain to another account" select "Initiate domain move"
+6) enter this email "chamsedin.azouz@gmail.com" then confirm.
+
+*) token generation:
+	nanoID: V1StGXR8_Z5jdHi6B-myT
