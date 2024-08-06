@@ -1,4 +1,5 @@
 import AboutUs from '@/components/about-us'
+import FloatingTitle from '@/components/floating-title'
 import From from '@/components/form'
 import Header from '@/components/header'
 import Hero from '@/components/hero'
@@ -25,7 +26,7 @@ export default function Home() {
                 <SectionDivider />
                 <From />
             </div>
-            <div className="fixed bottom-0 left-0">Title</div>
+            <FloatingTitle />
         </main>
     )
 }

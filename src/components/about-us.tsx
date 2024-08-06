@@ -20,12 +20,9 @@ export default function AboutUs() {
             transition={{ delay: 0.175 }}
             id="about"
         >
-            <div className="transform">
-                <SectionHeading>About Us</SectionHeading>
-            </div>
             <div
                 ref={Ref}
-                className="flex px-2 flex-col-reverse items-center justify-between gap-10 lg:flex-row"
+                className="flex flex-col-reverse items-center justify-between gap-10 px-2 lg:flex-row"
             >
                 <motion.div
                     style={{
